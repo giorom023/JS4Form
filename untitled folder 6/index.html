@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="AllMonitor">
+      <div class="MiniCube">
+        <div id="MiniCube2" class="MiniCube2"></div>
+      </div>
+
+      <div class="FormClass">
+        <form>
+          <label for="widthInput">Set Width:</label>
+          <input type="text" id="widthInput" placeholder="Enter width in px" />
+          <button type="button" onclick="changeWidth()">Apply</button>
+
+          <label for="heightInput">Set Height:</label>
+          <input
+            type="text"
+            id="heightInput"
+            placeholder="Enter height in px"
+          />
+          <button type="button" onclick="changeHeight()">Apply</button>
+
+          <label for="colorInput">Set Color:</label>
+          <input type="text" id="colorInput" placeholder="Enter color" />
+          <button type="button" onclick="changeColor()">Apply</button>
+
+          <label for="radiusInput">Set Border Radius:</label>
+          <input
+            type="text"
+            id="radiusInput"
+            placeholder="Enter border radius in px"
+          />
+          <button type="button" onclick="changeRadius()">Apply</button>
+        </form>
+      </div>
+    </div>
+    <div class="ButtonClassApply">
+      <script>
+        function changeWidth() {
+          let widthValue = document.getElementById("widthInput").value;
+          document.getElementById("MiniCube2").style.width = widthValue + "px";
+        }
+
+        function changeHeight() {
+          let heightValue = document.getElementById("heightInput").value;
+          document.getElementById("MiniCube2").style.height =
+            heightValue + "px";
+        }
+
+        function changeColor() {
+          let colorValue = document.getElementById("colorInput").value;
+          document.getElementById("MiniCube2").style.backgroundColor =
+            colorValue;
+        }
+
+        function changeRadius() {
+          let radiusValue = document.getElementById("radiusInput").value;
+          document.getElementById("MiniCube2").style.borderRadius =
+            radiusValue + "px";
+        }
+      </script>
+    </div>
+  </body>
+</html>
